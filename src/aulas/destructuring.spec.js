@@ -17,9 +17,14 @@ describe("Aprendendo sobre destructuring", () => {
     expect(destructuring(null, arr)).toEqual({ name, cpf, idade });
   });
 
-  it("Criar variáveis a partir de uma string", () => {
+  it("Criar objeto a partir de uma string", () => {
     const url = "/users/3467/active";
     expect(destructuring(null, null, url)).toEqual({ api: 'users', id: '3467', status: 'active' });
+  });
+
+  it('Criar objeto com uma sobra de argumentos a partir de um array', () => {
+    const url = "/users/3467/company/3456/address";
+    expect(destructuring(null, null, url)).toEqual({ api: 'users', id: '3467', status: 'company', options: [ '3456', 'address'] });
   });
 
 });
