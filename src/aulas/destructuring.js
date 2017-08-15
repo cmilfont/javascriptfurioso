@@ -1,3 +1,4 @@
+/* Destructuring Assigment */
 module.exports = (objeto, arr, str) => {
 
   if (str) {
